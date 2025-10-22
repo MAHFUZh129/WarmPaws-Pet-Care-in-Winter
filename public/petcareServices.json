@@ -1,0 +1,110 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": "$25",
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Our Winter Coat Fitting for Dogs ensures your furry companion stays warm, stylish, and comfortable throughout the cold season. Each coat is custom-measured and designed to provide maximum insulation while allowing easy movement. We offer a variety of cozy materials and fashionable designs suited for different dog breeds and sizes. Whether your dog loves outdoor walks or simply enjoys lounging indoors, our expert team will help you find the perfect winter outfit that combines warmth, comfort, and charm, keeping your pet happy even on the coldest days.",
+    "image": "https://i.ibb.co.com/JR7qg2v5/download-1.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Thermal Blanket for Cats",
+    "providerName": "CozyPurrs Hub",
+    "providerEmail": "contact@cozypurrs.com",
+    "price": "$20",
+    "rating": 4.8,
+    "slotsAvailable": 6,
+    "description": "Our Thermal Blanket for Cats is specially crafted to provide ultimate warmth and comfort for your feline friend during cold nights. Made with soft, heat-retaining fabric, this blanket helps maintain your cat’s body temperature without overheating. Its lightweight and breathable texture ensures maximum relaxation while being safe for sensitive skin. Perfect for both young kittens and older cats, the blanket can be placed in beds, carriers, or couches, turning any spot into a cozy sanctuary. Treat your cat to restful, snug sleep every night with this essential winter comfort item.",
+    "image": "https://i.ibb.co.com/YzhDGhv/download-2.jpg",
+    "category": "Comfort"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Heated Pet Bed Installation",
+    "providerName": "WarmNest Pets",
+    "providerEmail": "support@warmnest.com",
+    "price": "$40",
+    "rating": 5.0,
+    "slotsAvailable": 5,
+    "description": "Our Heated Pet Bed Installation service provides a safe and energy-efficient solution for keeping your pets warm during the winter. We use premium heating pads and thermostatic control systems that distribute gentle warmth evenly, ensuring your pets enjoy consistent comfort. The setup process is quick, clean, and fully tailored to your pet’s bed size and breed. Whether you have a small cat or a large dog, we make sure their rest area is cozy and secure. With our installation, your furry friend can sleep soundly and stay healthy throughout the coldest months.",
+    "image": "https://i.ibb.co.com/My723SrL/download-3.jpg",
+    "category": "Comfort"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Winter Grooming & Coat Care",
+    "providerName": "FluffyFriends Salon",
+    "providerEmail": "grooming@fluffyfriends.com",
+    "price": "$30",
+    "rating": 4.7,
+    "slotsAvailable": 7,
+    "description": "Our Winter Grooming & Coat Care service keeps your pet’s fur soft, shiny, and healthy even in the harshest weather. Cold temperatures can make your pet’s skin dry and their fur tangled, but our expert groomers use hydrating shampoos and nourishing oils to prevent that. We trim, detangle, and treat the coat carefully, ensuring proper circulation and cleanliness. Additionally, we provide paw and ear care to protect from frost and dryness. With our gentle grooming routine, your pet will look and feel refreshed, confident, and ready to face the winter in style.",
+    "image": "https://i.ibb.co.com/d4xMNXd1/download-4.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Paw & Nose Protection Balm",
+    "providerName": "WarmPaws Care",
+    "providerEmail": "contact@warmpaws.com",
+    "price": "$15",
+    "rating": 4.9,
+    "slotsAvailable": 10,
+    "description": "Our Paw & Nose Protection Balm provides a natural shield against harsh winter elements that can crack or irritate your pet’s skin. Made from organic, pet-safe ingredients such as shea butter and coconut oil, this balm deeply moisturizes while forming a protective barrier against frost, salt, and dryness. It absorbs quickly without leaving a greasy residue, making it ideal for daily use. Whether your pet spends time indoors or outdoors, regular application keeps their paws soft, smooth, and healthy. Give your furry friend the comfort they deserve this winter with our trusted balm.",
+    "image": "https://i.ibb.co.com/rGBvzQ2T/download-5.jpg",
+    "category": "Health"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Winter Wellness Checkup",
+    "providerName": "HealthyTail Vet Clinic",
+    "providerEmail": "vet@healthytail.com",
+    "price": "$50",
+    "rating": 5.0,
+    "slotsAvailable": 3,
+    "description": "Our Winter Wellness Checkup is a comprehensive veterinary service designed to ensure your pet remains in optimal health during the cold season. The checkup includes a full physical examination, nutritional assessment, and preventive care advice to boost your pet’s immunity. Our experienced veterinarians check for common winter issues such as dry skin, joint stiffness, and respiratory sensitivity. We also review vaccination updates and provide customized dietary recommendations. Regular seasonal checkups are key to early detection of potential problems, helping your pet enjoy a healthy, energetic, and worry-free winter lifestyle.",
+    "image": "https://i.ibb.co.com/JRYXr2cG/download-6.jpg",
+    "category": "Health"
+  },
+  {
+    "serviceId": 7,
+    "serviceName": "Nutritional Winter Meal Plan",
+    "providerName": "TailBites Nutrition",
+    "providerEmail": "hello@tailbites.com",
+    "price": "$35",
+    "rating": 4.8,
+    "slotsAvailable": 6,
+    "description": "Our Nutritional Winter Meal Plan provides personalized diet solutions to keep your pets healthy, strong, and active even in freezing temperatures. Designed by certified animal nutritionists, the plan balances essential proteins, fats, and vitamins tailored to your pet’s breed, size, and lifestyle. We help ensure your pet maintains ideal weight and energy levels throughout the season. The plan includes recommendations for warm, digestible meals and hydration support. With our expert guidance, your furry companion will enjoy delicious, wholesome food while staying protected from the challenges of the winter months.",
+    "image": "https://i.ibb.co.com/PsCjPVTr/download-7.jpg",
+    "category": "Nutrition"
+  },
+  {
+    "serviceId": 8,
+    "serviceName": "Indoor Exercise & Play Session",
+    "providerName": "HappyPaws Center",
+    "providerEmail": "info@happypaws.com",
+    "price": "$20",
+    "rating": 4.8,
+    "slotsAvailable": 8,
+    "description": "Our Indoor Exercise & Play Session keeps pets active, entertained, and healthy during the winter when outdoor playtime is limited. The sessions include guided physical games, obstacle runs, and interactive toys that encourage movement and bonding. Each activity is designed to match your pet’s age and energy level, helping prevent weight gain and boredom. Supervised by trained professionals, the sessions also improve agility and obedience. Whether it’s chasing toys or solving play puzzles, your pet will enjoy every moment in a safe, climate-controlled environment that promotes happiness and overall well-being.",
+    "image": "https://i.ibb.co.com/xtS4nvVD/download-8.jpg",
+    "category": "Activity"
+  },
+  {
+    "serviceId": 9,
+    "serviceName": "Winter Safety & Training Workshop",
+    "providerName": "PawMasters Academy",
+    "providerEmail": "train@pawmasters.com",
+    "price": "$28",
+    "rating": 4.9,
+    "slotsAvailable": 5,
+    "description": "Our Winter Safety & Training Workshop teaches essential skills and safety techniques to keep your pets protected during cold weather. Led by certified trainers, this interactive workshop covers safe walking practices, recognizing signs of frostbite, and how to keep your pet calm in icy conditions. It also focuses on obedience training and recall commands to ensure better control in winter environments. Participants receive take-home resources, tips for home care, and demonstrations of protective gear use. It’s the perfect way to strengthen your bond while ensuring your pet’s comfort and safety.",
+    "image": "https://i.ibb.co.com/tMty1yWJ/images.jpg",
+    "category": "Training"
+  }
+]
