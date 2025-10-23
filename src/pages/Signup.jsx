@@ -3,7 +3,7 @@ import { Link,  useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
-import { toast } from 'react-toastify';
+import { toast} from 'react-hot-toast';
 
 
 const Signup = () => {

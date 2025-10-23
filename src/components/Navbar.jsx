@@ -3,7 +3,7 @@ import { Link,  } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { use } from 'react';
 import { RxAvatar } from 'react-icons/rx';
-import { toast } from 'react-toastify';
+import { toast} from 'react-hot-toast';
 
 const Navbar = () => {
         const{user,logout} = use(AuthContext)
