@@ -6,6 +6,7 @@ import services from '../pages/services';
 import ServiceDetailsPage from '../pages/ServiceDetailsPage';
 import Login from '../pages/Login';
 import Signup from '../pages/Signup';
+import PrivateRoute from '../provider/PrivateRoute';
 
 export const router = createBrowserRouter([
   {
@@ -18,13 +19,15 @@ export const router = createBrowserRouter([
           loader:()=>fetch('/petcareServices.json')          
         },
         {
-          path:'/sevices',
+          path:'/services',
           Component:services,
           loader:()=>fetch('/petcareServices.json')          
         },
         {
-          path:'/sevicesDetails/:id',
-          Component:ServiceDetailsPage,
+          path:'/servicesDetails/:id',
+          element:<PrivateRoute>
+                      <ServiceDetailsPage></ServiceDetailsPage>
+                   </PrivateRoute>,
           loader:()=>fetch('/petcareServices.json')          
         },
         {

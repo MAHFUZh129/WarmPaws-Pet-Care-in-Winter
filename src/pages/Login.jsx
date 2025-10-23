@@ -1,27 +1,45 @@
-import React from 'react';
-import { Link } from 'react-router';
-
+import React, { use, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router';
+import { AuthContext } from '../provider/AuthProvider';
+import { FaEye } from "react-icons/fa";
+import { IoEyeOff } from "react-icons/io5";
+import { toast } from 'react-toastify';
 const Login = () => {
+    const [show,setShow]= useState(false);
+    const {login}=use(AuthContext);
+    const location=useLocation();
+    const navigate=useNavigate();
+    // console.log(location)
+    const [err,setErr]=useState("")
+    const handlelogin=(e)=>{
+         e.preventDefault();
+        const form=e.target
+        const email =form.email.value
+        const password =form.password.value
+        // console.log({password,email})
+
+        login(email,password)
+        .then((result)=>{
+           const user =result.user
+           console.log(user)
+           toast.success("Logged In Successfully");
+           navigate(`${location.state?location.state:"/"}`)
+        })
+        .catch((error) => {
+    // const errorCode = error.code;
+    // const errorMessage = error.message;
+    setErr('Password is Incorrect')
+  });
+
+    }
     return (
         <div >
              <div className="flex col-span-6 justify-center  md:min-h-screen bg-purple-300 items-center   p-5 ">
       <div className=" w-full max-w-md shadow-xl rounded-xl bg-base-100 p-6">
-        <h2 className="text-2xl font-bold text-center mb-4">Login Here</h2>
+        <h2 className="text-2xl font-bold text-center mb-4">Login Your Account</h2>
 
-        <form  className="space-y-4">
-          {/* Name Field */}
-          <div>
-            <label className="label">
-              <span className="label-text font-semibold">Name</span>
-            </label>
-            <input
-              type="text"
-              name="name"
-              required
-             placeholder="Enter your name"
-              className="input input-bordered w-full"
-            />
-          </div>
+        <form onSubmit={handlelogin}  className="space-y-4">
+          
 
           {/* Email Field */}
           <div>
@@ -37,17 +55,20 @@ const Login = () => {
             />
           </div>
           {/* password */}
-          <div>
+          <div className="relative">
             <label className="label">
               <span className="label-text font-semibold">Password</span>
             </label>
             <input
-              type="password"
-              name="name"
+              type={show?"text":'password'}
+              name="password"
              placeholder="Enter your password"
               className="input input-bordered w-full"
             />
+            <span onClick={()=>setShow(!show)} className="absolute right-5 top-9"> 
+                {show?<IoEyeOff />:<FaEye />}</span>
           </div>
+          {err && <h3 className='text-red-700'>{err}</h3>}
             <h3 className="link link-hover">Forget Password?</h3>
           {/* Submit Button */}
           <button

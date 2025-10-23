@@ -1,9 +1,21 @@
-import React from 'react';
 import logo from '../assets/logo1.jpg';
 import { Link,  } from 'react-router';
+import { AuthContext } from '../provider/AuthProvider';
+import { use } from 'react';
+import { RxAvatar } from 'react-icons/rx';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
-    
+        const{user,logout} = use(AuthContext)
+        const hanldeLogout=()=>{
+              logout()
+              .then(() => {
+             toast.success("Sign-out Successful")
+              })
+              .catch((error) => {
+                 console.log(error)
+              });
+        }
     return (
         <div>
             <div className="navbar bg-base-300 shadow-sm">
@@ -16,24 +28,28 @@ const Navbar = () => {
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li><Link to='/'>Home</Link></li>
-        <li> <Link to='/sevices'>Services</Link></li>
+        <li> <Link to='/services'>Services</Link></li>
         <li><Link>My Profile</Link></li>
       </ul>
     </div>
     <div className='flex items-center gap-2'>
     <img className='h-14 w-22 rounded-md' src={logo} alt="" />
-    <h3 className='text-2xl text-blue-600 font-bold'>PetLove</h3>
+    <h3 className='text-2xl text-blue-600 font-bold hidden md:block'>PetLove</h3>
     </div>
   </div>
   <div className="navbar-center font-bold gap-3 hidden lg:flex">
     <Link to='/'>Home</Link>
-    <Link to='/sevices'>Services</Link>
+    <Link to='/services'>Services</Link>
     <Link>My Profile</Link>
   </div>
-  <div className="navbar-end gap-3">
-    <Link to='/login' className="btn btn-primary font-bold">Log In</Link>
-     <Link to='/signup' className="btn btn-secondary font-bold">Sign Up</Link>
-
+  <div className="navbar-end gap-5">
+    {
+      user?(<span className='flex items-center text-lg text-green-600 font-bold gap-1'><RxAvatar size={34} /><span className='hidden md:block'>{user.email}</span></span>):(<Link to='/signup' className="btn btn-secondary font-bold">Sign Up</Link>)
+    }
+    {
+      user? <button onClick={hanldeLogout} className="btn btn-primary font-bold">Log Out</button> :(    <Link to='/login' className="btn btn-primary font-bold">Log In</Link>)
+    }
+    
   </div>
 </div>
         </div>

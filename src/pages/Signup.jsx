@@ -1,14 +1,60 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React, { use, useState } from 'react';
+import { Link,  useNavigate } from 'react-router';
+import { AuthContext } from '../provider/AuthProvider';
+import { FaEye } from "react-icons/fa";
+import { IoEyeOff } from "react-icons/io5";
+import { toast } from 'react-toastify';
+
 
 const Signup = () => {
+
+        const {createUser,setUser}=use(AuthContext)
+        const [err, setErr] = useState('');
+         const [show,setShow]= useState(false)
+        const navigate =useNavigate()
+        const handleReg=(e)=>{
+        e.preventDefault();
+        const form=e.target
+        
+        const email =form.email.value
+        const password =form.password.value
+        // console.log(password,name,email,photo)
+
+         // Password validation logic
+    if (password.length < 6) {
+      setErr('Password must be at least 6 characters long.');
+      return;
+    }
+    if (!/[A-Z]/.test(password)) {
+      setErr('Password must contain at least one uppercase letter.');
+      return;
+    }
+    if (!/[a-z]/.test(password)) {
+      setErr('Password must contain at least one lowercase letter.');
+      return;
+    }
+
+
+        createUser(email,password)
+        .then((result)=>{
+           const user =result.user
+           setUser(user)
+              toast.success("Signed In Successfully");
+           navigate('/')
+
+        })
+        .catch((error) => {
+          toast.error("Something went wrong");
+  });
+
+    }
     return (
         <div>
             <div className="flex col-span-6 justify-center  md:min-h-screen bg-purple-300 items-center   p-5 ">
       <div className=" w-full max-w-md shadow-xl rounded-xl bg-base-100 p-6">
-        <h2 className="text-2xl font-bold text-center mb-4">SignUp Here</h2>
+        <h2 className="text-2xl font-bold text-center mb-4">SignUp Your Account</h2>
 
-        <form  className="space-y-4">
+        <form onSubmit={handleReg}  className="space-y-4">
           {/* Name Field */}
           <div>
             <label className="label">
@@ -49,18 +95,21 @@ const Signup = () => {
             />
           </div>
           {/* password */}
-          <div>
+          <div className="relative">
             <label className="label">
               <span className="label-text font-semibold">Password</span>
             </label>
             <input
             required
-              type="password"
-              name="name"
+              type={show?"text":'password'}
+              name="password"
              placeholder="Enter your password"
               className="input input-bordered w-full"
             />
+            <span onClick={()=>setShow(!show)} className="absolute right-5 top-9"> 
+                {show?<IoEyeOff />:<FaEye />}</span>
           </div>
+            {err && <h3 className='text-red-700'>{err}</h3>}
           {/* Submit Button */}
           <button
             type="submit"

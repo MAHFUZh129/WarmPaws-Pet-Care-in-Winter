@@ -7,7 +7,7 @@ const ServiceDetailsPage = () => {
     const {id}=useParams();
     const [details , setDetails]=useState({});
 
-    console.log(id,details)
+    // console.log(id,details)
     useEffect(()=>{
           const serviceDetails=data.find((detail)=>detail.serviceId==id)
           setDetails(serviceDetails)
