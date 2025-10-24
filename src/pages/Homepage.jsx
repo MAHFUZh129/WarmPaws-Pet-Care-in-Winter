@@ -4,8 +4,6 @@ import { Link, useLoaderData } from 'react-router';
 import ServiceCard from '../components/ServiceCard';
 import WinterTips from '../components/WinterTips';
 import ExpertVets from '../components/ExpertVets';
-import { Suspense } from 'react';
-import Loading from '../components/Loading';
 import Slides from '../components/Slides';
 
 
@@ -39,13 +37,13 @@ const Homepage = () => {
       </div>
       
 
-      <Suspense fallback={<Loading />}>
+      
         <div className="w-11/12 mx-8 my-10 gap-8 grid grid-cols-1 md:grid-cols-3">
           {data.map((card) => (
             <ServiceCard key={card.serviceId} card={card} />
           ))}
         </div>
-      </Suspense>
+      
 
       {/* extra Section */}
       <section>

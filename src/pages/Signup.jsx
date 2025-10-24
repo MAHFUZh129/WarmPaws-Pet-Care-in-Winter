@@ -8,7 +8,7 @@ import { toast} from 'react-hot-toast';
 
 const Signup = () => {
 
-        const {createUser,setUser}=use(AuthContext)
+        const {createUser,setUser,updateUser}=use(AuthContext)
         const [err, setErr] = useState('');
          const [show,setShow]= useState(false)
         const navigate =useNavigate()
@@ -16,6 +16,8 @@ const Signup = () => {
         e.preventDefault();
         const form=e.target
         
+        const name =form.name.value
+        const photo =form.photo.value
         const email =form.email.value
         const password =form.password.value
         // console.log(password,name,email,photo)
@@ -38,9 +40,16 @@ const Signup = () => {
         createUser(email,password)
         .then((result)=>{
            const user =result.user
-           setUser(user)
+           updateUser({displayName:name, photoURL:photo})
+           .then(()=>{
+              setUser({...user, displayName:name, photoURL:photo})
               toast.success("Signed In Successfully");
-           navigate('/')
+              navigate('/')
+           })
+           .catch((error) => {
+               toast.error(error);
+               setUser(user)
+});
 
         })
         .catch((error) => {

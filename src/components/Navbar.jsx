@@ -42,9 +42,10 @@ const Navbar = () => {
     <Link to='/services'>Services</Link>
     <Link>My Profile</Link>
   </div>
-  <div className="navbar-end gap-5">
+  <div className="navbar-end gap-8">
     {
-      user?(<span className='flex items-center text-lg text-green-600 font-bold gap-1'><RxAvatar size={34} /><span className='hidden md:block'>{user.email}</span></span>):(<Link to='/signup' className="btn btn-secondary font-bold">Sign Up</Link>)
+      user?(<span className='flex items-center text-lg text-green-600 font-bold gap-1'><RxAvatar size={34} /><span className='hidden md:block'>{user.displayName
+}</span></span>):(<Link to='/signup' className="btn btn-secondary font-bold">Sign Up</Link>)
     }
     {
       user? <button onClick={hanldeLogout} className="btn btn-primary font-bold">Log Out</button> :(    <Link to='/login' className="btn btn-primary font-bold">Log In</Link>)

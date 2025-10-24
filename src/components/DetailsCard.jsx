@@ -1,7 +1,7 @@
 import React from 'react';
 import { TiStarHalfOutline } from 'react-icons/ti';
 import R from '../assets/view-cats-dogs-showing-friendship.jpg';
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 
 const DetailsCard = ({details}) => {
      
