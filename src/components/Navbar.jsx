@@ -45,7 +45,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end gap-8">
     {
-      user?(<span className='flex items-center text-lg text-green-600 font-bold gap-1'><RxAvatar size={34} /><span className='hidden md:block'>{user.displayName}</span></span>):(<Link to='/signup' className="btn btn-secondary font-bold">Sign Up</Link>)
+      user?(<span className='flex items-center text-lg text-green-600 font-bold gap-1'><RxAvatar size={34} /><span className='hidden hover:text-pink-500 md:block'>{user.displayName}</span></span>):(<Link to='/signup' className="btn btn-secondary font-bold">Sign Up</Link>)
     }
     {
       user? <button onClick={hanldeLogout} className="btn btn-primary font-bold">Log Out</button> :(    <Link to='/login' className="btn btn-primary font-bold">Log In</Link>)
