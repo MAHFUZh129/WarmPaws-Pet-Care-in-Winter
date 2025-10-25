@@ -31,7 +31,11 @@ const MyProfile = () => {
 
           {/*  update Button */}
           <div className="mt-6">
-           
+           <Link
+              className="btn btn-primary btn-wide flex items-center gap-2 font-semibold"
+            >
+              <FaUserEdit /> Update Profile
+            </Link>
           </div>
         </div> 
 

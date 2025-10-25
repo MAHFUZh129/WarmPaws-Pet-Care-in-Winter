@@ -39,8 +39,7 @@ const Login = () => {
       const email =emailRef.current.value;
       reset(email)
       .then((res) => {
-    toast.success('Password reset email sent!')
-    // ..
+    alert('done')
   })
   .catch((error) => {
     // const errorCode = error.code;
