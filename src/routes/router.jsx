@@ -8,6 +8,7 @@ import Login from '../pages/Login';
 import Signup from '../pages/Signup';
 import PrivateRoute from '../provider/PrivateRoute';
 import Loading from '../components/Loading';
+import MyProfile from '../pages/MyProfile';
 
 export const router = createBrowserRouter([
   {
@@ -42,6 +43,13 @@ export const router = createBrowserRouter([
         {
           path:'/signup',
           Component:Signup,
+        },
+        {
+          path:'/profile',
+          element:<PrivateRoute>
+                      <MyProfile></MyProfile>
+                   </PrivateRoute>,
+          
         },
     ]
   },

@@ -1,11 +1,59 @@
-import React from 'react';
+import React, { use } from 'react';
+import { Link } from "react-router";
+import { FaUserEdit } from "react-icons/fa";
+import { AuthContext } from '../provider/AuthProvider';
 
 const MyProfile = () => {
+      const { user } = use(AuthContext);
     return (
-        <div>
-            
+    <div className="min-h-screen gap-5  bg-gradient-to-b from-blue-100 to-blue-300 flex justify-center items-center px-4">
+      <div className="card w-full max-w-md bg-base-100 shadow-2xl p-6 rounded-md">
+        <div className="flex flex-col items-center text-center">
+          {/* Profile Image */}
+          <div className="avatar py-8">
+            <div className="w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+              <img
+                src={
+                  user?.photoURL
+                    ? user.photoURL
+                    : "https://cdn-icons-png.flaticon.com/512/847/847969.png"
+                }
+                alt="User Profile"
+              />
+            </div>
+          </div>
+
+          {/* User Info */}
+          <h2 className="text-2xl font-bold mt-4 text-pink-700">
+            {user?.displayName }
+          </h2>
+          <p className="text-gray-600">{user?.email }</p>
+
+          {/*  update Button */}
+          <div className="mt-6">
+           
+          </div>
+        </div> 
+
+        {/*  Extra details  */}
+        <div className="divider font-bold mt-8">Account Info</div>
+        <div className="space-y-2 text-left">
+          <p>
+            <span className="font-semibold">User ID:</span>{" "}
+            <span className='text-green-400'>{user?.uid } </span>
+          </p>
+          <p>
+            <span className="font-semibold">Email Verified:</span>{" "}
+            <span className='text-green-500'>{user?.emailVerified ? " Yes" : " No"}</span>
+          </p>
+          <p>
+            <span className="font-semibold">Provider:</span>{" "}
+           <span className='text-green-400'>  {user?.providerData?.[0]?.providerId || "Email/Password"}</span>
+          </p>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default MyProfile;

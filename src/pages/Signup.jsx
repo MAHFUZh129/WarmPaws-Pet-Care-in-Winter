@@ -8,7 +8,7 @@ import { toast} from 'react-hot-toast';
 
 const Signup = () => {
 
-        const {createUser,setUser,updateUser}=use(AuthContext)
+        const {createUser,googleSignin,setUser,updateUser}=use(AuthContext)
         const [err, setErr] = useState('');
          const [show,setShow]= useState(false)
         const navigate =useNavigate()
@@ -57,6 +57,25 @@ const Signup = () => {
   });
 
     }
+
+
+    const handleGoogleSignin=()=>{
+          googleSignin()
+          .then((result)=>{
+               const user =result.user
+               console.log(user)
+               toast.success("Sign Up With Google Successfully");
+               navigate('/')
+               
+            })
+             .catch((error) => {
+        
+        setErr('Happened something wrong')
+      });
+            
+        }
+
+
     return (
         <div>
             <div className="flex col-span-6 justify-center  md:min-h-screen bg-purple-300 items-center   p-5 ">
@@ -127,7 +146,7 @@ const Signup = () => {
             Sign Up
           </button>
           {/* google signin */}
-          <button 
+          <button onClick={handleGoogleSignin}
             type="button" className="flex btn btn-primary items-center justify-center gap-3 bg-white text-gray-800 px-5 py-2  w-full font-semibold hover:bg-gray-100 transition-colors cursor-pointer" >
                   <img
                     src="https://www.svgrepo.com/show/475656/google-color.svg"

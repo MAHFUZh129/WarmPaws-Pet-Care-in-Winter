@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import React, { use, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { FaEye } from "react-icons/fa";
@@ -7,7 +7,8 @@ import { toast} from 'react-hot-toast';
 
 const Login = () => {
     const [show,setShow]= useState(false);
-    const {login}=use(AuthContext);
+    const emailRef=useRef(null)
+    const {login,googleSignin,reset}=use(AuthContext);
     const location=useLocation();
     const navigate=useNavigate();
     // console.log(location)
@@ -33,6 +34,38 @@ const Login = () => {
   });
 
     }
+
+    const handleReset=()=>{
+      const email =emailRef.current.value;
+      reset(email)
+      .then((res) => {
+    toast.success('Password reset email sent!')
+    // ..
+  })
+  .catch((error) => {
+    // const errorCode = error.code;
+    const errorMessage = error.message;
+    toast.error(errorMessage)
+    // ..
+  });
+    }
+
+
+    const handleGoogleSignin=()=>{
+      googleSignin()
+      .then((result)=>{
+           const user =result.user
+           console.log(user)
+           toast.success("Logged In With Google Successfully");
+           navigate(`${location.state?location.state:"/"}`)
+           
+        })
+         .catch((error) => {
+    
+    setErr('Happened something wrong')
+  });
+        
+    }
     return (
         <div >
              <div className="flex col-span-6 justify-center  md:min-h-screen bg-purple-300 items-center   p-5 ">
@@ -50,6 +83,7 @@ const Login = () => {
             <input
               type="email"
               name="email"
+              ref={emailRef}
               required
               placeholder="Enter your email"
               className="input input-bordered w-full"
@@ -70,7 +104,7 @@ const Login = () => {
                 {show?<IoEyeOff />:<FaEye />}</span>
           </div>
           {err && <h3 className='text-red-700'>{err}</h3>}
-            <h3 className="link link-hover">Forget Password?</h3>
+            <button onClick={handleReset} type='button' className="link link-hover">Forget Password?</button>
           {/* Submit Button */}
           <button
             type="submit"
@@ -79,7 +113,7 @@ const Login = () => {
             Log In
           </button>
           {/* google signin */}
-          <button 
+          <button onClick={handleGoogleSignin}
             type="button" className="flex btn btn-primary items-center justify-center gap-3 bg-white text-gray-800 px-5 py-2  w-full font-semibold hover:bg-gray-100 transition-colors cursor-pointer" >
                   <img
                     src="https://www.svgrepo.com/show/475656/google-color.svg"

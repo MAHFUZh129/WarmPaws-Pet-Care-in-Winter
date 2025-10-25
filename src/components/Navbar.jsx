@@ -7,6 +7,7 @@ import { toast} from 'react-hot-toast';
 
 const Navbar = () => {
         const{user,logout} = use(AuthContext)
+        // console.log(user)
         const hanldeLogout=()=>{
               logout()
               .then(() => {
@@ -29,7 +30,7 @@ const Navbar = () => {
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li><Link to='/'>Home</Link></li>
         <li> <Link to='/services'>Services</Link></li>
-        <li><Link>My Profile</Link></li>
+        <li><Link to='/profile'>My Profile</Link></li>
       </ul>
     </div>
     <div className='flex items-center gap-2'>
@@ -40,12 +41,11 @@ const Navbar = () => {
   <div className="navbar-center font-bold gap-3 hidden lg:flex">
     <Link to='/'>Home</Link>
     <Link to='/services'>Services</Link>
-    <Link>My Profile</Link>
+    <Link to='/profile'>My Profile</Link>
   </div>
   <div className="navbar-end gap-8">
     {
-      user?(<span className='flex items-center text-lg text-green-600 font-bold gap-1'><RxAvatar size={34} /><span className='hidden md:block'>{user.displayName
-}</span></span>):(<Link to='/signup' className="btn btn-secondary font-bold">Sign Up</Link>)
+      user?(<span className='flex items-center text-lg text-green-600 font-bold gap-1'><RxAvatar size={34} /><span className='hidden md:block'>{user.displayName}</span></span>):(<Link to='/signup' className="btn btn-secondary font-bold">Sign Up</Link>)
     }
     {
       user? <button onClick={hanldeLogout} className="btn btn-primary font-bold">Log Out</button> :(    <Link to='/login' className="btn btn-primary font-bold">Log In</Link>)
