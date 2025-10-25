@@ -6,7 +6,7 @@ import { AuthContext } from '../provider/AuthProvider';
 const MyProfile = () => {
       const { user } = use(AuthContext);
     return (
-    <div className="min-h-screen gap-5  bg-gradient-to-b from-blue-100 to-blue-300 flex justify-center items-center px-4">
+    <div className="min-h-screen gap-5 py-5 bg-gradient-to-b from-blue-100 to-blue-300 flex justify-center items-center px-4">
       <div className="card w-full max-w-md bg-base-100 shadow-2xl p-6 rounded-md">
         <div className="flex flex-col items-center text-center">
           {/* Profile Image */}

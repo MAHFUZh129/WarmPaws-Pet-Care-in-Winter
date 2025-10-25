@@ -20,17 +20,17 @@ const DetailsCard = ({details}) => {
             <div className='md:w-[650px] rounded-md p-5 bg-base-300'>
                         <img className=' rounded-md w-full' src={details.image} alt="" />
                         <h1 className='text-green-700 font-semibold text-xl'>{details.serviceName}</h1>
-                        <div className='flex  my-4'>
+                        <div className='md:flex  my-4'>
                             <span className='flex items-center font-extrabold text-lg gap-2'><span className='text-amber-500 text-lg font-bold mr-2'>Ratings:</span><TiStarHalfOutline size={22} />{details.rating}</span>
                               <div className="divider  divider-horizontal"></div>
                               <div className="divider  divider-horizontal"></div>
                             <span className='font-semibold text-blue-800 text-lg'><span className='text-amber-500 font-bold mr-4'>Price:</span>{details.price}</span>
                         </div>
                         <div className='my-5 text- rounded-md py-6 pl-3 bg-amber-100'>
-                            <h3>Provider Name: <span className='ml-4 font-semibold'>{details.providerName}</span></h3>
-                            <h3>Provider Email: <span className='ml-5 font-semibold'>{details.providerEmail}</span></h3>
-                            <h3>Slots Available: <span className='ml-5 font-semibold'>{details.slotsAvailable}</span></h3>
-                            <h3>Category: <span className='ml-14 font-semibold'>{details.category}</span></h3>
+                            <h3 className=''>Provider Name: <span className='md:ml-4 font-semibold'>{details.providerName}</span></h3>
+                            <h3>Provider Email: <span className='md:ml-5 font-semibold'>{details.providerEmail}</span></h3>
+                            <h3>Slots Available: <span className='md:ml-5 font-semibold'>{details.slotsAvailable}</span></h3>
+                            <h3>Category: <span className='md:ml-14 font-semibold'>{details.category}</span></h3>
                         </div>
                         <div>
                             <h3 className='text-lg font-bold'>Description:</h3>

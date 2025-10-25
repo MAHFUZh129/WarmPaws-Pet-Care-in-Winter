@@ -19,7 +19,7 @@ const Slides = () => {
   pagination={{ clickable: true }}
   navigation={true}
   modules={[Navigation, Pagination, Autoplay]}
-  className=""
+  className="mt-23 md:mt-0"
 >
 
 {/* Slide 1 */}
