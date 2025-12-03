@@ -4,91 +4,144 @@ import { FcCallback } from 'react-icons/fc';
 import { FaSquareFacebook, FaSquareTwitter } from 'react-icons/fa6';
 import { GrInstagram } from 'react-icons/gr';
 import { BsWhatsapp } from 'react-icons/bs';
+import { NavLink } from 'react-router';
 
 const Footer = () => {
   return (
-    <div className='bg-base-200 opacity-80 bg-[url("https://placedog.net/910/450")] bg-cover bg-center bg-no-repeat'
-    >
-      <footer className="footer sm:footer-horizontal  text-base-content p-10">
-        <aside className='space-y-3 '>
-          <div className='flex items-center gap-2'>
-            <img className='h-14 w-22 rounded-md' src={logo} alt="" />
-            <h3 className='text-3xl text-blue-700 font-bold'>PetLove</h3>
+    <div className="relative overflow-hidden">
+
+      {/*  Animated Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-black"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(255,0,150,0.15),_transparent_70%)]"></div>
+
+      <footer className="relative z-10 max-w-7xl mx-auto px-6 py-8 grid gap-14 lg:grid-cols-4 md:grid-cols-2 text-white">
+
+        {/*  BRAND */}
+        <aside className="space-y-6 bg-white/5 backdrop-blur-xl p-6 rounded-2xl shadow-xl hover:shadow-pink-500/30 transition">
+          <div className="flex items-center gap-3">
+            <img className="h-14 w-14 rounded-md shadow-lg" src={logo} alt="logo" />
+            <h3 className="text-2xl font-extrabold bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent">
+              PetLove
+            </h3>
           </div>
-          <p className='font-semibold text-black text-lg'>
-            At <span className='text-2xl text-pink-500 font-bold'>PetLove</span>, we believe every pet deserves warmth, <br /> comfort, and love—especially during the chilly winter <br /> months. Our mission is to help pet owners keep their <br /> furry friends healthy, happy, and safe when temperatures <br /> drop.
-            Providing reliable service since 1992
+
+          <p className="text-gray-300  ">
+            Winter pet care made premium. We ensure warmth, comfort, and safety
+            for your furry family members all season long.
           </p>
-          <div className='flex items-center gap-3' >
-            <FcCallback size={48} />
-            <div className=''>
-              <h5 className='text-2xl text-blue-300 font-bold'>(913) 756-3126</h5>
-              <h6 className='text-blue-200 text-lg'>Got Questions? Call us 24/7</h6>
-            </div>
-          </div>
 
-        </aside>
-        <nav className='mr-15'>
-          <h6 className=" text-2xl text-amber-500 font-bold">Working Hours</h6>
-          <div className='space-y-7 mt-7 bg-amber-100  p-3 rounded-md'>
-            <p className='text-lg font-semibold'>Sun – Thus: <span className='ml-5 font-bold text-blue-950'>7am – 6pm</span></p>
-            <p className='text-lg font-semibold'>Saturday: <span className='ml-8 font-bold text-blue-950'>9am – 4pm</span></p>
-            <p className='text-lg font-semibold'> Fri: <span className='ml-20 font-bold text-blue-950'>Closed</span></p>
-          </div>
-        </nav>
-        <nav className='mr-15'>
-          <h6 className="text-2xl font-bold mb-4 text-amber-500">Useful Links</h6>
-
-          <a href='/' className="link link-hover font-bold text-xl text-white">Home</a>
-          <a href='/about' className="link link-hover font-bold text-xl  text-white">About</a>
-          <a href='/services' className="link link-hover font-bold text-xl text-white">Services</a>
-          <a className="link link-hover font-bold text-xl text-white">Contact</a>
-          <a className="link link-hover font-bold text-xl text-white">FAQ</a>
-          <a className="link link-hover font-bold text-xl text-white">Shop</a>
-          <a className="link link-hover font-bold text-xl text-white">Sale</a>
-
-        </nav>
-        <nav>
-          <h6 className="text-2xl font-bold text-amber-500 mb-4">Newsletter</h6>
-          <div className='space-y-7'>
-            <p className='font-semibold text-lg text-amber-600'>Be first in the queue! Get <br /> our latest
-              news straight to your inbox.</p>
+          <div className="flex items-center gap-4 pt-2">
+            <FcCallback size={44} />
             <div>
-              <div className="join">
-                <div>
-                  <label className="input validator join-item">
-                    <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <g
-                        strokeLinejoin="round"
-                        strokeLinecap="round"
-                        strokeWidth="2.5"
-                        fill="none"
-                        stroke="currentColor"
-                      >
-                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                      </g>
-                    </svg>
-                    <input type="email" placeholder="mail@site.com" required />
-                  </label>
-                  <div className="validator-hint hidden">Enter valid email address</div>
-                </div>
-                <button className="btn btn-neutral join-item">Join</button>
-              </div>
+              <h5 className=" font-bold text-yellow-500">(913) 756-3126</h5>
+              <p className="text-sm text-gray-400">Always Available</p>
             </div>
-            <div className=''>
-              <span className='font-bold '>Find Us On</span>
-              <div className='flex mt-2 gap-5'>
-                <FaSquareFacebook size={34} />
-                <FaSquareTwitter size={34} />
-                <GrInstagram size={34} />
-                <BsWhatsapp size={34} />
-              </div>
+          </div>
+        </aside>
+
+        {/*  WORKING HOURS */}
+        <nav className="bg-white/5 backdrop-blur-xl p-6 rounded-2xl shadow-xl hover:shadow-blue-500/30 transition">
+          <h6 className="text-lg font-bold text-amber-600 mb-6">Working Hours</h6>
+
+          <div className="space-y-4 text-gray-300">
+            <p className="flex justify-between"><span>Sun – Thu</span><span className="font-bold text-white">7am – 6pm</span></p>
+            <p className="flex justify-between"><span>Saturday</span><span className="font-bold text-white">9am – 4pm</span></p>
+            <p className="flex justify-between"><span>Friday</span><span className="font-bold text-red-600">Closed</span></p>
+          </div>
+        </nav>
+
+        {/*  LINKS */}
+       
+<nav className="bg-white/5 backdrop-blur-xl p-6 rounded-2xl shadow-xl hover:shadow-purple-500/30 transition">
+  <h6 className="text-lg font-bold text-amber-600 mb-6">Quick Links</h6>
+
+  <div className="grid gap-3 ">
+
+    <NavLink 
+      to="/" 
+      className="hover:text-pink-400 transition hover:translate-x-2"
+    >
+      Home
+    </NavLink>
+
+    <NavLink 
+      to="/about" 
+      className="hover:text-pink-400 transition hover:translate-x-2"
+    >
+      About
+    </NavLink>
+
+    <NavLink 
+      to="/services" 
+      className="hover:text-pink-400 transition hover:translate-x-2"
+    >
+      Services
+    </NavLink>
+
+    <NavLink 
+      to="" 
+      className="hover:text-pink-400 transition hover:translate-x-2"
+    >
+      Contact
+    </NavLink>
+
+    <NavLink 
+      to="" 
+      className="hover:text-pink-400 transition hover:translate-x-2"
+    >
+      FAQ
+    </NavLink>
+
+    <NavLink 
+      to="" 
+      className="hover:text-pink-400 transition hover:translate-x-2"
+    >
+      Shop
+    </NavLink>
+
+  </div>
+</nav>
+
+       
+
+        {/*  NEWSLETTER */}
+        <nav className="bg-gradient-to-br from-pink-500/10 to-blue-500/10 backdrop-blur-xl p-6 rounded-2xl shadow-xl border border-white/10 hover:shadow-pink-500/40 transition">
+          <h6 className="text-lg font-bold text-amber-600 mb-5">Newsletter</h6>
+
+          <p className="text-gray-300 mb-5">
+            Join our VIP list for exclusive offers and pet care tips.
+          </p>
+
+          <div className="join w-full mb-6">
+            <input
+              type="email"
+              placeholder="mail@site.com"
+              className="input join-item w-full text-black"
+            />
+            <button className="btn join-item bg-gradient-to-r from-pink-500 to-blue-500 text-white hover:opacity-90 animate-pulse">
+              Join
+            </button>
+          </div>
+
+          {/* SOCIAL */}
+          <div>
+            <p className="font-semibold mb-3">Find Us On</p>
+            <div className="flex gap-5 text-3xl">
+              <FaSquareFacebook className="hover:text-blue-500 hover:scale-125 transition" />
+              <FaSquareTwitter className="hover:text-sky-400 hover:scale-125 transition" />
+              <GrInstagram className="hover:text-pink-500 hover:scale-125 transition" />
+              <BsWhatsapp className="hover:text-green-400 hover:scale-125 transition" />
             </div>
           </div>
         </nav>
+
       </footer>
-      <p className='text-center my-3 font-bold text-xl text-red-700'>Copyright © 2025 - All right reserved</p>
+
+      {/* ⚡ BOTTOM BAR */}
+      <div className="relative z-10 text-center py-5 text-sm text-gray-400 tracking-widest bg-black/50">
+        © 2025 PetLove – All Rights Reserved
+      </div>
+
     </div>
   );
 };

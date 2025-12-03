@@ -13,7 +13,7 @@ const MyProfile = () => {
 
 
     return (
-        <div className="min-h-screen py-10 bg-gray-50 flex justify-center items-center px-4">
+        <div className="min-h-screen mt-14 bg-gray-50 flex justify-center items-center px-4">
             <div className="card w-full max-w-lg bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-[1.01] rounded-2xl border-t-4 border-pink-500">
                 
                 {/* Header/Background Area for Visual Impact */}
@@ -21,7 +21,7 @@ const MyProfile = () => {
                     <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-80 rounded-t-2xl"></div>
                 </div>
 
-                <div className="p-8 -mt-20"> {/* Adjust margin to overlap the header */}
+                <div className="p-8 -mt-20">  
                     <div className="flex flex-col mb-5 items-center text-center">
                         
                         {/* Profile Image with Enhanced Ring */}
@@ -40,14 +40,12 @@ const MyProfile = () => {
                         </div>
 
                         {/* User Info with Stronger Typography */}
-                        <h2 className="text-3xl font-extrabold text-gray-800 mb-1 tracking-wide">
+                        <h2 className="text-2xl font-bold text-gray-800 mb-1 tracking-wide">
                             {user?.displayName || "User Name"} 
-                            {/* Added default text for null check */}
                         </h2>
                         <p className="text-lg font-medium text-gray-500 mb-6">{user?.email || "No Email Provided"}</p>
 
-                        {/* Update Button (Using Link and a Modern Look) */}
-                        <Link to="/update-profile"> {/* Assuming this is the correct route */}
+                        <Link to=""> 
                            <button
                              className="btn bg-pink-600 text-white border-none btn-lg shadow-md hover:bg-pink-700 hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-0.5 flex items-center gap-2 font-bold rounded-full px-8"
                            >

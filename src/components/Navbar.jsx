@@ -51,7 +51,7 @@ const Navbar = () => {
             <h3 className='text-2xl text-primary font-bold hidden md:block'>PetLove</h3>
           </div>
         </div>
-        <div className="navbar-center text-lg font-bold gap-3 hidden lg:flex">
+        <div className="navbar-center  font-bold gap-3 hidden lg:flex">
           <NavLink to="/" className={({ isActive }) => `hover:text-primary hover:bg-base-200 transition duration-300 ease-in-out relative group p-2 ${isActive ? "border-b-2 border-primary" : ""}`} >
             Home
           </NavLink>
@@ -64,10 +64,10 @@ const Navbar = () => {
         </div>
         <div className="navbar-end gap-4">
           {
-            user ? (<span className='flex items-center text-lg text-green-600 font-bold gap-1'><RxAvatar size={34} /><span className='hidden hover:text-pink-500 md:block'>{user.displayName}</span></span>) : (<Link to='/signup' className="btn text-lg btn-secondary font-bold">Sign Up</Link>)
+            user ? (<span className='flex items-center  text-green-600 font-bold gap-1'><RxAvatar size={34} /><span className='hidden hover:text-pink-500 md:block'>{user.displayName}</span></span>) : (<Link to='/signup' className="btn  btn-secondary font-bold">Sign Up</Link>)
           }
           {
-            user ? <button onClick={hanldeLogout} className="btn text-lg btn-primary font-bold">Log Out</button> : (<Link to='/login' className="btn btn-primary text-lg font-bold">Log In</Link>)
+            user ? <button onClick={hanldeLogout} className="btn  btn-primary font-bold">Log Out</button> : (<Link to='/login' className="btn btn-primary font-bold">Log In</Link>)
           }
 
         </div>

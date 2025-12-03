@@ -11,20 +11,18 @@ const Services = () => {
                 
         <div className="min-h-screen bg-gray-50 "> {/* Add a subtle background and padding */}
             
-            {/* 🌟 Eye-Catching Header/Hero Section */}
             <header className="py-20 bg-gradient-to-r from-blue-600 to-teal-500 text-white shadow-xl ">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     {/* Use a large, bold title */}
-                    <h1 className="text-xl font-extrabold tracking-tight sm:text-6xl">
+                    <h1 className="md:text-5xl font-bold tracking-tight text-2xl">
                         Our Specialized Services
                     </h1>
                     {/* Add a compelling subtitle */}
-                    <p className="mt-4 text-xl opacity-90 max-w-2xl mx-auto">
+                    <p className="mt-4 text-xl italic opacity-90 max-w-2xl mx-auto">
                         Discover the solutions built for your success. Quality and expertise in every offering.
                     </p>
                     <div className="mt-8">
-                        {/* Optional: Add a call-to-action button for a dynamic look */}
-                        <a href="" className="inline-flex items-center text-2xl justify-center px-6 py-3 border border-transparent  font-medium rounded-full text-blue-600 bg-white hover:bg-gray-100 shadow-lg transition duration-300 ease-in-out">
+                        <a href="" className="inline-flex items-center text-lg justify-center px-6 py-3 border border-transparent  font-medium rounded-full text-blue-600 bg-white hover:bg-gray-100 shadow-lg transition duration-300 ease-in-out">
                             Get a Free Consultation
                         </a>
                     </div>
@@ -41,17 +39,15 @@ const Services = () => {
                     Expert Services Designed to Meet Your Needs.
                 </h2>
                 
-                <div className=' w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-7'>
+                <div className=' w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-2'>
                     {
-                        // Check if data exists before mapping to prevent potential errors
                         data && data.map((card, index) => (
                             <ServiceCard key={index} card={card} />
                         ))
                     }
                 </div>
                 
-                {/* 💡 Optional: Add a visual separator or footer element */}
-                <div className="mt-10 border-t-4  border-dotted font-bold italic border-amber-500 pt-8 text-3xl text-center text-blue-700">
+                <div className="mt-8 border-t-3  border-dotted font-bold italic border-amber-500 pt-6 text-xl text-center text-blue-700">
                     <p>Ready to get started? We are here to help.</p>
                 </div>
 

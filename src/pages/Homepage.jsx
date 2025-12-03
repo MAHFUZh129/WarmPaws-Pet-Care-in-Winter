@@ -15,10 +15,10 @@ const Homepage = () => {
       <Slides></Slides>
       <div className="md:flex py-10 justify-between items-center">
         <div className="flex-1 space-y-5 ml-8">
-          <h3 className="font-bold text-5xl">
+          <h3 className="font-bold text-3xl">
             The World's Best Team for Pet Care Services
           </h3>
-          <p className="text-sky-600 text-lg font-semibold">
+          <p className="text-sky-600  font-semibold">
             We’re proud to have a passionate and experienced team dedicated to
             giving your pets the best care possible. From grooming and nutrition
             to health and comfort, our experts ensure your furry friends are
@@ -37,9 +37,9 @@ const Homepage = () => {
       </div>
 
       <div className='bg-gradient-to-r from-blue-300 via-gray-200 to-teal-200 py-15'>
-        <h4 className='text-center text-primary font-bold text-5xl'>Our Winter Pet Care Services</h4>
-        <h4 className='text-center italic text-amber-700 mt-2 font-bold text-3xl'>From warmth to wellness — explore our full range of seasonal services.</h4>
-        <div className="w-11/12 mx-auto my-10 gap-8 grid grid-cols-1 md:grid-cols-4">
+        <h4 className='text-center text-primary font-bold text-4xl'>Our Winter Pet Care Services</h4>
+        <h4 className='text-center italic text-amber-700 mt-2 font-bold text-xl'>From warmth to wellness — explore our full range of seasonal services.</h4>
+        <div className="w-11/12 mx-auto my-10 gap-2 grid grid-cols-1 md:grid-cols-4">
           {data.map((card) => (
             <ServiceCard key={card.serviceId} card={card} />
           ))}

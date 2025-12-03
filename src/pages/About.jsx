@@ -6,10 +6,10 @@ const About = () => {
       
       {/* 1. High-Impact Hero Section */}
       <header className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-teal-600 dark:text-teal-400">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-teal-600 dark:text-teal-400">
           🐾 About Us: The Heart of Winter Pet Care
         </h1>
-        <p className="mt-4 text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        <p className="mt-4 text-xl md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
           Dedicated to ensuring every pet is safe, healthy, and cozy when the temperatures drop.
         </p>
       </header>
@@ -32,7 +32,7 @@ const About = () => {
             {/* Placeholder for an image or a compelling icon graphic */}
             <div className="w-full h-48 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center">
               <span className="text-gray-500 dark:text-gray-400 italic">
-                
+                <img src="https://i.ibb.co.com/p6GkNLjS/images-1.jpg" alt="" />
               </span>
             </div>
           </div>
