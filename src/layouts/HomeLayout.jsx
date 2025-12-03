@@ -6,22 +6,22 @@ import { Outlet, useNavigation } from 'react-router';
 import Loading from '../components/Loading';
 
 const HomeLayout = () => {
-    const{state} =useNavigation()
+    const { state } = useNavigation()
     return (
         <div>
             <header>
-               <Navbar></Navbar>
-            </header> 
+                <Navbar></Navbar>
+            </header>
             <main>
                 <section>
-           {state=='load'?<Loading></Loading>:<Outlet></Outlet>}
-                    
+                    {state == 'load' ? <Loading></Loading> : <Outlet></Outlet>}
+
                 </section>
-                
+
             </main>
-             <footer>
+            <footer>
                 <Footer></Footer>
-             </footer>
+            </footer>
         </div>
     );
 };

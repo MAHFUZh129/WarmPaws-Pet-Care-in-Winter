@@ -2,13 +2,14 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router';
 import HomeLayout from '../layouts/HomeLayout';
 import Homepage from '../pages/Homepage';
-import services from '../pages/services';
 import ServiceDetailsPage from '../pages/ServiceDetailsPage';
 import Login from '../pages/Login';
 import Signup from '../pages/Signup';
 import PrivateRoute from '../provider/PrivateRoute';
 import Loading from '../components/Loading';
 import MyProfile from '../pages/MyProfile';
+import About from '../pages/About';
+import Services from '../pages/services';
 
 export const router = createBrowserRouter([
   {
@@ -18,20 +19,18 @@ export const router = createBrowserRouter([
         {
           index:true,
           Component:Homepage ,
-          loader:()=>fetch('/petcareServices.json'),
+          loader:()=>fetch('/petcareHome.json'),
           hydrateFallbackElement:<Loading></Loading>          
         },
         {
           path:'/services',
-          Component:services,
+          Component:Services,
           loader:()=>fetch('/petcareServices.json'),
           hydrateFallbackElement:<Loading></Loading>                   
         },
         {
           path:'/servicesDetails/:id',
-          element:<PrivateRoute>
-                      <ServiceDetailsPage></ServiceDetailsPage>
-                   </PrivateRoute>,
+          Component:ServiceDetailsPage,          
           loader:()=>fetch('/petcareServices.json'),
           hydrateFallbackElement:<Loading></Loading>          
 
@@ -45,10 +44,12 @@ export const router = createBrowserRouter([
           Component:Signup,
         },
         {
+          path:'/about',
+          Component:About
+        },
+        {
           path:'/profile',
-          element:<PrivateRoute>
-                      <MyProfile></MyProfile>
-                   </PrivateRoute>,
+         Component:MyProfile
           
         },
     ]

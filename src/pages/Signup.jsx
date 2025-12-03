@@ -86,7 +86,7 @@ const Signup = () => {
           {/* Name Field */}
           <div>
             <label className="label">
-              <span className="label-text font-semibold">Name</span>
+              <span className="label-text  font-semibold">Name</span>
             </label>
             <input
               type="text"

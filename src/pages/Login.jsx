@@ -11,7 +11,6 @@ const Login = () => {
     const {login,googleSignin,reset}=use(AuthContext);
     const location=useLocation();
     const navigate=useNavigate();
-    // console.log(location)
     const [err,setErr]=useState("")
     const handlelogin=(e)=>{
          e.preventDefault();
@@ -28,26 +27,24 @@ const Login = () => {
            navigate(`${location.state?location.state:"/"}`)
         })
         .catch((error) => {
-    // const errorCode = error.code;
-    // const errorMessage = error.message;
     setErr('Password is Incorrect')
   });
 
     }
 
-    const handleReset=()=>{
-      const email =emailRef.current.value;
-      reset(email)
-      .then((res) => {
-        toast.success('Password reset email sent!')
-  })
-  .catch((error) => {
-    // const errorCode = error.code;
-    const errorMessage = error.message;
-    toast.error(errorMessage)
-    // ..
-  });
-    }
+  //   const handleReset=()=>{
+  //     const email =emailRef.current.value;
+  //     reset(email)
+  //     .then((res) => {
+  //       toast.success('Password reset email sent!')
+  // })
+  // .catch((error) => {
+  //   // const errorCode = error.code;
+  //   const errorMessage = error.message;
+  //   toast.error(errorMessage)
+  //   // ..
+  // });
+  //   }
 
 
     const handleGoogleSignin=()=>{
@@ -103,7 +100,7 @@ const Login = () => {
                 {show?<IoEyeOff />:<FaEye />}</span>
           </div>
           {err && <h3 className='text-red-700'>{err}</h3>}
-            <button onClick={handleReset} type='button' className="link link-hover">Forget Password?</button>
+            <button type='button' className="link link-hover">Forget Password?</button>
           {/* Submit Button */}
           <button
             type="submit"

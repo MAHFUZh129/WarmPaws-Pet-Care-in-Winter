@@ -7,28 +7,29 @@ import { BsWhatsapp } from 'react-icons/bs';
 
 const Footer = () => {
     return (
-        <div className='bg-base-200'>
+        <div className='bg-base-200 opacity-90 bg-[url("https://i.ibb.co.com/BpDmDLP/images-28.jpg")] bg-cover bg-center bg-no-repeat'
+>
             <footer className="footer sm:footer-horizontal  text-base-content p-10">
   <aside className='space-y-3 '>
     <div className='flex items-center gap-2'>
         <img className='h-14 w-22 rounded-md' src={logo} alt="" />
-        <h3 className='text-2xl text-blue-600 font-bold'>PetLove</h3>
+        <h3 className='text-3xl text-blue-700 font-bold'>PetLove</h3>
         </div>
-    <p className='font-semibold'>
-      At <span className='text-2xl text-pink-600 font-bold'>PetLove</span>, we believe every pet deserves warmth, <br /> comfort, and love—especially during the chilly winter <br /> months. Our mission is to help pet owners keep their <br /> furry friends healthy, happy, and safe when temperatures <br /> drop.
+    <p className='font-semibold text-black text-lg'>
+      At <span className='text-2xl text-pink-500 font-bold'>PetLove</span>, we believe every pet deserves warmth, <br /> comfort, and love—especially during the chilly winter <br /> months. Our mission is to help pet owners keep their <br /> furry friends healthy, happy, and safe when temperatures <br /> drop.
       Providing reliable service since 1992
     </p>
     <div className='flex items-center gap-3' >
         <FcCallback size={48} />
         <div className=''>       
-            <h5 className='text-2xl font-bold'>(913) 756-3126</h5>
-            <h6>Got Questions? Call us 24/7</h6>
+            <h5 className='text-2xl text-blue-600 font-bold'>(913) 756-3126</h5>
+            <h6 className='text-blue-600 text-lg'>Got Questions? Call us 24/7</h6>
         </div>
     </div>
 
   </aside>
   <nav className='mr-15'>
-    <h6 className=" text-lg font-bold">Working Hours</h6>
+    <h6 className=" text-2xl text-amber-500 font-bold">Working Hours</h6>
       <div className='space-y-7 mt-7 bg-amber-100  p-3 rounded-md'>
         <p className='text-lg font-semibold'>Sun – Thus: <span className='ml-5 font-bold text-blue-950'>7am – 6pm</span></p>
         <p className='text-lg font-semibold'>Saturday: <span className='ml-8 font-bold text-blue-950'>9am – 4pm</span></p>
@@ -36,21 +37,21 @@ const Footer = () => {
       </div>
   </nav>
   <nav className='mr-15'>
-    <h6 className="text-lg font-bold mb-4">Useful Links</h6>
+    <h6 className="text-2xl font-bold mb-4 text-amber-500">Useful Links</h6>
     
-   <a className="link link-hover font-semibold text-lg text-blue-950">Home</a>
-    <a className="link link-hover font-semibold text-lg text-blue-950">Contact</a>
-    <a className="link link-hover font-semibold text-lg text-blue-950">About</a>
-    <a className="link link-hover font-semibold text-lg text-blue-950">Services</a>
-    <a className="link link-hover font-semibold text-lg text-blue-950">FAQ</a>
-    <a className="link link-hover font-semibold text-lg text-blue-950">Shop</a>
-    <a className="link link-hover font-semibold text-lg text-blue-950">Sale</a>
+   <a href='/' className="link link-hover font-bold text-xl text-primary">Home</a>
+    <a  className="link link-hover font-bold text-xl text-primary">Contact</a>
+    <a href='/about' className="link link-hover font-bold text-xl text-primary">About</a>
+    <a href='/services' className="link link-hover font-bold text-xl text-primary">Services</a>
+    <a className="link link-hover font-bold text-xl text-primary">FAQ</a>
+    <a className="link link-hover font-bold text-xl text-primary">Shop</a>
+    <a className="link link-hover font-bold text-xl text-primary">Sale</a>
     
   </nav>
   <nav>
-    <h6 className="text-lg font-bold mb-4">Newsletter</h6>
+    <h6 className="text-2xl font-bold text-amber-500 mb-4">Newsletter</h6>
       <div className='space-y-7'>
-        <p className='font-semibold text-blue-950'>Be first in the queue! Get <br /> our latest
+        <p className='font-semibold text-lg text-blue-950'>Be first in the queue! Get <br /> our latest
 news straight to your inbox.</p>
         <div>
              <div className="join">

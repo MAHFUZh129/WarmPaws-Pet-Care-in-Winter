@@ -13,9 +13,10 @@ const ExpertVets = () => {
         <img className='h-52 rounded-md w-full' src="https://i.ibb.co.com/1t3DTYnN/download-9.jpg" alt="Dr. Sarah" />
       </figure>
       <div className="card-body">
-        <h3 className="card-title">Dr. Sarah Johnson</h3>
-        <p className='font-bold'>Specialist in Pet Nutrition & Winter Health</p>
+        <h3 className="card-title text-2xl font-bold text-green-700">Dr. Sarah Johnson</h3>
+        <p className='font-semibold text-lg '>Specialist in Pet Nutrition & Winter Health</p>
       </div>
+      <button className='btn btn-primary text-lg text-white'>Contact</button>
     </div>
 
     {/* Vet 2 */}
@@ -24,9 +25,11 @@ const ExpertVets = () => {
         <img className='h-52 rounded-md w-full'  src="https://i.ibb.co.com/q3fV0mBH/download-10.jpg" alt="Dr. Mark" />
       </figure>
       <div className="card-body">
-        <h3 className="card-title">Dr. Mark Daniels</h3>
-        <p  className='font-bold'>Veterinary Surgeon & Skin Care Expert</p>
+        <h3 className="card-title text-2xl font-bold text-green-700">Dr. Mark Daniels</h3>
+        <p  className='font-semibold text-lg '>Veterinary Surgeon & Skin Care Expert</p>
       </div>
+            <button className='btn btn-primary text-lg text-white'>Contact</button>
+
     </div>
 
     {/* Vet 3 */}
@@ -35,9 +38,11 @@ const ExpertVets = () => {
         <img className='h-52 rounded-md w-full'  src="https://i.ibb.co.com/wNPw9ZMv/download-11.jpg" alt="Dr. Emily" />
       </figure>
       <div className="card-body">
-        <h3 className="card-title">Dr. Emily Carter</h3>
-        <p  className='font-bold'>Behavior Specialist & Cold-Weather Trainer</p>
+        <h3 className="card-title text-2xl font-bold text-green-700">Dr. Emily Carter</h3>
+        <p  className='font-semibold text-lg '>Behavior Specialist & Cold-Weather Trainer</p>
       </div>
+            <button className='btn btn-primary text-lg text-white'>Contact</button>
+
     </div>
   </div>
 </section> 
