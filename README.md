@@ -1,4 +1,4 @@
-# 🐾 PetCare / PetLove – Full Stack Pet Service Platform
+# 🐾  PetLove – Full Stack Pet Service Platform
 
 PetCare (PetLove) is a modern, responsive full-stack web application designed to help pet owners easily explore pet care services and book them online. The platform focuses on user-friendly design, smooth navigation, and real-time service booking to create a complete digital pet care experience.
 
@@ -6,9 +6,8 @@ PetCare (PetLove) is a modern, responsive full-stack web application designed to
 
 ## 🚀 Live Demo
 
-🔗 Live Site: *(Add your live website link here)*
-🔗 Client GitHub: *(Add your client repository link here)*
-🔗 Server GitHub: *(Add your server repository link here)*
+🔗 Live Site: *(https://aesthetic-stardust-b47631.netlify.app/)*
+🔗 Client GitHub: *(https://github.com/MAHFUZh129/WarmPaws-Pet-Care-in-Winter.git)*
 
 ---
 
@@ -25,8 +24,6 @@ PetCare is built to connect pet owners with trusted pet care service providers. 
 * ✅ Service Listing & Service Details Page
 * ✅ Real-Time Service Booking with Toast Notifications
 * ✅ Responsive Design (Mobile, Tablet & Desktop)
-* ✅ Dynamic Data Loading from Backend API
-* ✅ Booking Form with Validation
 * ✅ Modern UI using Tailwind CSS & DaisyUI
 * ✅ Error Handling & Loading Spinner
 
@@ -43,14 +40,6 @@ PetCare is built to connect pet owners with trusted pet care service providers. 
 * React Icons
 * React Hot Toast
 
-### Backend:
-
-* Node.js
-* Express.js
-* MongoDB
-* Firebase Authentication
-* JWT (JSON Web Token)
-
 ---
 
 ## 📂 Project Structure
@@ -66,9 +55,7 @@ PetCare is built to connect pet owners with trusted pet care service providers. 
 ## 🧪 Functionality Highlights
 
 * Secure Login & Registration System
-* Service Data Fetched Dynamically from Database
 * Booking Confirmation with Success Notification
-* Role-Based Access Control (Admin/User if used)
 * Responsive UI for all screen sizes
 
 ---
@@ -77,20 +64,15 @@ PetCare is built to connect pet owners with trusted pet care service providers. 
 
 This project was built to improve my real-world full-stack development skills and to practice:
 
-* Building REST APIs
 * Authentication & Authorization
-* CRUD Operations
-* Frontend-Backend Integration
 * Modern UI/UX Design Principles
 
 ---
 
 ## 👨‍💻 Developer
 
-**Name:** *(Add your name here)*
-**Role:** MERN Stack Developer
-**GitHub:** *(Your GitHub link)*
-**LinkedIn:** *(Your LinkedIn link)*
+**Name:** *(Mahfuz Hossain)*
+**GitHub:** *(https://github.com/MAHFUZh129)*
 
 ---
 
