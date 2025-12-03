@@ -6,8 +6,8 @@ PetCare (PetLove) is a modern, responsive full-stack web application designed to
 
 ## 🚀 Live Demo
 
-🔗 Live Site: *(https://aesthetic-stardust-b47631.netlify.app/)*
-🔗 Client GitHub: *(https://github.com/MAHFUZh129/WarmPaws-Pet-Care-in-Winter.git)*
+🔗 Live Site: *[ https://aesthetic-stardust-b47631.netlify.app/ ]*
+
 
 ---
 
