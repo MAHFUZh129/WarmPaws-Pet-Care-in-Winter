@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className="about-us-container p-4 md:p-10 lg:p-16 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+    <div className="about-us-container p-10 mt-18 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
       
       {/* 1. High-Impact Hero Section */}
       <header className="text-center mb-12">

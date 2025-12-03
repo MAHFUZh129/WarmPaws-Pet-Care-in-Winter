@@ -38,7 +38,7 @@ const Homepage = () => {
 
       <div className='bg-gradient-to-r from-blue-300 via-gray-200 to-teal-200 py-15'>
         <h4 className='text-center text-primary font-bold text-5xl'>Our Winter Pet Care Services</h4>
-        <h4 className='text-center text-amber-700 mt-2 font-bold text-3xl'>From warmth to wellness — explore our full range of seasonal services.</h4>
+        <h4 className='text-center italic text-amber-700 mt-2 font-bold text-3xl'>From warmth to wellness — explore our full range of seasonal services.</h4>
         <div className="w-11/12 mx-auto my-10 gap-8 grid grid-cols-1 md:grid-cols-4">
           {data.map((card) => (
             <ServiceCard key={card.serviceId} card={card} />

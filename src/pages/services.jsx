@@ -34,8 +34,11 @@ const Services = () => {
             <div className='bg-gradient-to-r from-blue-200 to-teal-100 py-10  '> 
             <div className='max-w-11/12 mx-auto  '> 
                 
-                <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+                <h2 className="text-4xl font-bold text-center text-gray-800 mb-2 ">
                     Explore Our Service Portfolio
+                </h2>
+                <h2 className="text-xl font-bold text-center italic text-amber-700  mb-12">
+                    Expert Services Designed to Meet Your Needs.
                 </h2>
                 
                 <div className=' w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-7'>
@@ -48,7 +51,7 @@ const Services = () => {
                 </div>
                 
                 {/* 💡 Optional: Add a visual separator or footer element */}
-                <div className="mt-20 border-t border-gray-200 pt-8 text-5xl text-center text-blue-700">
+                <div className="mt-10 border-t-4  border-dotted font-bold italic border-amber-500 pt-8 text-3xl text-center text-blue-700">
                     <p>Ready to get started? We are here to help.</p>
                 </div>
 
