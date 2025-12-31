@@ -67,7 +67,6 @@ This project was built to improve my real-world full-stack development skills an
 * Responsive UI for all screen sizes
 
 ---
-
 ## 🚀 How to Run This Project Locally
 
 Follow the steps below to run the project on your local machine:
@@ -92,14 +91,13 @@ If this is a React/Vite project:
 ```bash
 npm run dev
 ```
-```
+
+
 
 ### 5️⃣ Open in browser
 ```
 http://localhost:5173           # For Vite/React
-
 ```
-
 ---
 
 ## 👨‍💻 Developer
