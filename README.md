@@ -6,7 +6,7 @@ PetCare (PetLove) is a modern, responsive full-stack web application designed to
 
 ## 🚀 Live Demo
 
-🔗 Live Site: *[ https://aesthetic-stardust-b47631.netlify.app/ ]*
+🔗 Live Site: https://aesthetic-stardust-b47631.netlify.app/ 
 
 
 ---
