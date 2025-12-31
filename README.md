@@ -16,6 +16,14 @@ PetCare (PetLove) is a modern, responsive full-stack web application designed to
 PetCare is built to connect pet owners with trusted pet care service providers. Users can browse services, view detailed information, and book services instantly. The project emphasizes performance, security, and responsive UI for all devices.
 
 ---
+## 🎯 Purpose of This Project
+
+This project was built to improve my real-world full-stack development skills and to practice:
+
+* Authentication & Authorization
+* Modern UI/UX Design Principles
+
+---
 
 ## ✨ Key Features
 
@@ -60,12 +68,37 @@ PetCare is built to connect pet owners with trusted pet care service providers. 
 
 ---
 
-## 🎯 Purpose of This Project
+## 🚀 How to Run This Project Locally
 
-This project was built to improve my real-world full-stack development skills and to practice:
+Follow the steps below to run the project on your local machine:
 
-* Authentication & Authorization
-* Modern UI/UX Design Principles
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/MAHFUZh129/WarmPaws-Pet-Care-in-Winter.git
+```
+
+### 2️⃣ Go to the project directory
+```bash
+cd your-repository
+```
+
+### 3️⃣ Install dependencies
+```bash
+npm install
+```
+
+### 4️⃣ Start the development server
+If this is a React/Vite project:
+```bash
+npm run dev
+```
+```
+
+### 5️⃣ Open in browser
+```
+http://localhost:5173           # For Vite/React
+
+```
 
 ---
 
